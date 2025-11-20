@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Bot Maker - Create Unlimited Telegram Bots</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📋 Terms & Conditions</h2>
+            </div>
+            <div class="modal-body">
+                <div class="terms-text">
+                    <h3>Welcome to Reaction Bot Maker!</h3>
+                    <p>By using our service, you agree to the following terms:</p>
+                    
+                    <div class="term-item">
+                        <strong>1. Service Usage</strong>
+                        <p>You agree to use this service responsibly and in compliance with Telegram's Terms of Service.</p>
+                    </div>
+                    
+                    <div class="term-item">
+                        <strong>2. Bot Token Security</strong>
+                        <p>You are responsible for keeping your bot tokens secure. Never share them publicly.</p>
+                    </div>
+                    
+                    <div class="term-item">
+                        <strong>3. Content Responsibility</strong>
+                        <p>You are solely responsible for the content and actions of bots you create using this service.</p>
+                    </div>
+                    
+                    <div class="term-item">
+                        <strong>4. Service Availability</strong>
+                        <p>We strive to provide reliable service but cannot guarantee 100% uptime.</p>
+                    </div>
+                    
+                    <div class="term-item">
+                        <strong>5. Privacy</strong>
+                        <p>Your bot tokens are stored securely and used only to operate your bots.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn decline-btn" onclick="declineTerms()">Decline</button>
+                <button class="modal-btn accept-btn" onclick="acceptTerms()">I Agree</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification-popup" class="notification-popup">
+        <div class="notification-content">
+            <div class="notification-icon" id="notification-icon"></div>
+            <div class="notification-message" id="notification-message"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="create-section">
+            <div class="hero-content">
+                <div class="logo-container">
+                    <div class="logo-circle">
+                        <span class="logo-icon">🤖</span>
+                        <span class="logo-sparkle sparkle-1">✨</span>
+                        <span class="logo-sparkle sparkle-2">⚡</span>
+                        <span class="logo-sparkle sparkle-3">💬</span>
+                    </div>
+                </div>
+                <h1 class="title">Reaction Bot Maker</h1>
+                <p class="subtitle">Create Unlimited Telegram Reaction Bots in Seconds</p>
+                
+                <div class="input-container">
+                    <input type="text" id="token" class="neon-input" placeholder="Enter Your Bot Token" autocomplete="off">
+                </div>
+                
+                <button class="create-btn" onclick="createBot()">
+                    <span class="btn-glow"></span>
+                    <span class="btn-text">Create Bot</span>
+                </button>
+            </div>
+
+            <div class="guide-section">
+                <h2 class="guide-title">⚡ Quick Setup Guide</h2>
+                
+                <div class="guide-steps">
+                    <div class="guide-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Open Telegram</h3>
+                            <p>Search for <strong>@BotFather</strong> and start a chat</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Create Your Bot</h3>
+                            <p>Send <strong>/newbot</strong> and follow instructions</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Copy Bot Token</h3>
+                            <p>BotFather will give you a token - copy it</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Paste & Create</h3>
+                            <p>Paste the token above and click Create Bot</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="guide.html" class="detailed-guide-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                    View Detailed Guide
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <span>Create</span>
+        </a>
+        <a href="bots.html?tab=all" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+            <span>All Bots</span>
+        </a>
+        <a href="bots.html?tab=my" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>My Bots</span>
+        </a>
+        <a href="bots.html?tab=updates" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Updates</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
