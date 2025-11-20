@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Guide - Reaction Bot Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="notification-popup" class="notification-popup">
+        <div class="notification-content">
+            <div class="notification-icon" id="notification-icon"></div>
+            <div class="notification-message" id="notification-message"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="guide-page">
+            <div class="page-header">
+                <h1 class="page-title">📚 Complete Bot Creation Guide</h1>
+                <p class="page-subtitle">Step-by-step instructions to create your first Telegram bot</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <div class="guide-number">Step 1</div>
+                        <h2>Open Telegram & Find BotFather</h2>
+                    </div>
+                    <div class="guide-card-body">
+                        <p>BotFather is Telegram's official bot that helps you create and manage bots.</p>
+                        <ul>
+                            <li>Open your Telegram app (mobile or desktop)</li>
+                            <li>In the search bar, type <strong>@BotFather</strong></li>
+                            <li>Click on the verified BotFather account (it has a blue checkmark)</li>
+                            <li>Click "Start" to begin chatting with BotFather</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <div class="guide-number">Step 2</div>
+                        <h2>Create a New Bot</h2>
+                    </div>
+                    <div class="guide-card-body">
+                        <p>Use the /newbot command to create your bot:</p>
+                        <ul>
+                            <li>Type <code>/newbot</code> and send the message</li>
+                            <li>BotFather will ask you to choose a name for your bot</li>
+                            <li>Enter any name you like (e.g., "My Awesome Bot")</li>
+                            <li>This is the display name users will see</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <div class="guide-number">Step 3</div>
+                        <h2>Choose a Username</h2>
+                    </div>
+                    <div class="guide-card-body">
+                        <p>Next, you need to choose a unique username for your bot:</p>
+                        <ul>
+                            <li>The username must end with "bot" (e.g., myawesomebot or my_awesome_bot)</li>
+                            <li>It must be unique - if taken, try a different name</li>
+                            <li>Only letters, numbers, and underscores are allowed</li>
+                            <li>Usernames are case-insensitive</li>
+                        </ul>
+                        <p class="tip"><strong>💡 Tip:</strong> If your desired username is taken, try adding numbers or underscores.</p>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <div class="guide-number">Step 4</div>
+                        <h2>Copy Your Bot Token</h2>
+                    </div>
+                    <div class="guide-card-body">
+                        <p>After creating your bot, BotFather will send you a token:</p>
+                        <ul>
+                            <li>The token looks like: <code>123456789:ABCdefGHIjklMNOpqrsTUVwxyz</code></li>
+                            <li>This token is the password for your bot - keep it secret!</li>
+                            <li>Click on the token to select it</li>
+                            <li>Copy it to your clipboard</li>
+                        </ul>
+                        <p class="warning"><strong>⚠️ Warning:</strong> Never share your bot token publicly. Anyone with this token can control your bot!</p>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <div class="guide-number">Step 5</div>
+                        <h2>Activate Your Bot</h2>
+                    </div>
+                    <div class="guide-card-body">
+                        <p>Now use our platform to activate your bot:</p>
+                        <ul>
+                            <li>Go back to the <a href="index.html">home page</a></li>
+                            <li>Paste your bot token in the input field</li>
+                            <li>Click the "Create Bot" button</li>
+                            <li>Wait for the success message</li>
+                        </ul>
+                        <p class="success"><strong>✅ Success:</strong> Your bot is now active and ready to use!</p>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-card-header">
+                        <div class="guide-number">Step 6</div>
+                        <h2>Test Your Bot</h2>
+                    </div>
+                    <div class="guide-card-body">
+                        <p>Let's make sure your bot is working:</p>
+                        <ul>
+                            <li>Open Telegram and search for your bot's username</li>
+                            <li>Click "Start" to begin chatting with your bot</li>
+                            <li>Your bot will automatically add reactions to messages!</li>
+                            <li>Try sending different messages to see the reactions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2 class="faq-title">❓ Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>Can I create multiple bots?</h3>
+                        <p>Yes! You can create unlimited bots. Just repeat the process with BotFather for each new bot.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is this service free?</h3>
+                        <p>Yes, our bot maker service is completely free to use.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What if I lose my bot token?</h3>
+                        <p>You can get your token again from BotFather. Just send /mybots, select your bot, and choose "API Token".</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I delete my bot?</h3>
+                        <p>Yes, you can delete bots through BotFather using the /mybots command.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why isn't my bot responding?</h3>
+                        <p>Make sure you've activated it on our platform and that the bot token is correct.</p>
+                    </div>
+                </div>
+
+                <div class="guide-footer">
+                    <a href="index.html" class="back-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <span>Create</span>
+        </a>
+        <a href="bots.html?tab=all" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+            <span>All Bots</span>
+        </a>
+        <a href="bots.html?tab=my" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>My Bots</span>
+        </a>
+        <a href="bots.html?tab=updates" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Updates</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
